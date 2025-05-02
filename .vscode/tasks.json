@@ -1,0 +1,25 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "C++ Build and Run",
+      "type": "shell",
+      "command": "cmd",
+      "args": [
+        "/C",
+        "g++.exe -std=c++14 ${file} -o ${fileDirname}\\${fileBasenameNoExtension}.exe && ${fileDirname}\\${fileBasenameNoExtension}.exe < ${fileDirname}\\inputf.txt > ${fileDirname}\\outputf.txt"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "presentation": {
+        "reveal": "silent",
+        "panel": "shared",
+        "showReuseMessage": false
+        // "clear": true
+      },
+      "problemMatcher": ["$gcc"]
+    }
+  ]
+}
