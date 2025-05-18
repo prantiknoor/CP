@@ -13,7 +13,7 @@ This repository contains my solutions to various problem-solving and competitive
 - Improve problem-solving skills
 - Track progress over time
 
-## How to Setup C++ in VS Code for CP in Windows
+## How to Setup C/C++ in VS Code for CP in Windows
 
 
 1. **Install VS Code** if you haven't already did it.  
@@ -23,7 +23,7 @@ This repository contains my solutions to various problem-solving and competitive
 
 - **Windows:** Install [MinGW](https://sourceforge.net/projects/mingw/files/latest/download)
 
-3. **Install C++ Compiler**
+3. **Install C/C++ Compiler**
 
    1. Run the installed **MinGW** file.
    2. Continue installing with the default configurations
@@ -53,7 +53,7 @@ This repository contains my solutions to various problem-solving and competitive
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "C++ Build and Run",
+      "label": "C/C++ Build and Run",
       "type": "shell",
       "command": "cmd",
       "args": [
@@ -93,7 +93,6 @@ int main() {
   int i;
   cin >> i;
   cout << "Hello, Competitive Programming! " << i << endl;
-  return 0;
 }
 ```
 
@@ -105,11 +104,12 @@ To compile and run:
 
 - Click on the **Terminal** in the menu bar.
 - Click on **Run Build Task**.
-- If you want to automate this, open the `keybindings.json` file. And paste the below shortcut. (You can modify the shortcut)
-
+- If you want to automate this, open the `keybindings.json` file. (*Ctrl+Shift+P*, then search "Keyboard", select the one with JSON)
+![Searching Command](./screenshots/Command.png)
+- At the end of the list, And paste the below shortcut. (Ctrl+Shift+P, then search "Keyboard", select the one with JSON)
 ```json
 {
-  "key": "f9",
+  "key": "f9", // When you click on the F9 button, it will run your C/C++ code. If you want, you can change it.
   "command": "workbench.action.tasks.build",
   "when": "taskCommandsRegistered"
 }
