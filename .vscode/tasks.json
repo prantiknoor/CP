@@ -7,7 +7,7 @@
       "command": "cmd",
       "args": [
         "/C",
-        "g++.exe -std=c++14 ${file} -o ${fileDirname}\\${fileBasenameNoExtension}.exe && ${fileDirname}\\${fileBasenameNoExtension}.exe < ${fileDirname}\\inputf.txt > ${fileDirname}\\outputf.txt"
+        "g++.exe -std=c++14 ${file} -o ${fileDirname}\\${fileBasenameNoExtension}.exe && ${fileDirname}\\${fileBasenameNoExtension}.exe < ${workspaceFolder}\\inputf.txt > ${workspaceFolder}\\outputf.txt"
       ],
       "group": {
         "kind": "build",
