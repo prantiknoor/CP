@@ -4,22 +4,29 @@
     {
       "label": "C/C++ Build and Run",
       "type": "shell",
-      "command": "cmd",
+      "command": "${workspaceFolder}/.vscode/runcode.ps1",
       "args": [
-        "/C",
-        "g++.exe -std=c++14 ${file} -o ${fileDirname}\\${fileBasenameNoExtension}.exe && ${fileDirname}\\${fileBasenameNoExtension}.exe < ${workspaceFolder}\\inputf.txt > ${workspaceFolder}\\outputf.txt"
+        "-CodePath",
+        "${file}",
+        "-ExePath",
+        "${fileDirname}/${fileBasenameNoExtension}.exe",
+        "-InputPath",
+        "${workspaceFolder}/inputf.txt",
+        "-OutputPath",
+        "${workspaceFolder}/outputf.txt"
       ],
       "group": {
         "kind": "build",
-        "isDefault": true
+        "isDefault": true,
       },
       "presentation": {
         "reveal": "silent",
         "panel": "shared",
         "showReuseMessage": false
-        // "clear": true
       },
-      "problemMatcher": ["$gcc"]
+      "problemMatcher": [
+        "$gcc"
+      ]
     }
   ]
 }
