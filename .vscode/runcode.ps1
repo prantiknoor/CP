@@ -35,7 +35,7 @@ $needCompile = -not (Test-Path $ExePath) -or ((Get-Item $CodePath).LastWriteTime
 
 if ($needCompile) {
     $compileStart = Get-Date
-    & $gpp.Source "-std=c++17" "-O2" "-o" $ExePath $CodePath 2>&1
+    & $gpp.Source "-std=c++17" "-O2" "-Wall" "-o" $ExePath $CodePath 2>&1
     if ($LASTEXITCODE -ne 0) { Fail "Compilation failed." }
     $compileTime = (Get-Date) - $compileStart
     Write-Host ("Compilation done in {0:N3} sec" -f $compileTime.TotalSeconds) -ForegroundColor Green
